@@ -1,0 +1,74 @@
+/* lets start by giving the page universale styling */
+* {
+    font-family: monospace; 
+    /* border: solid 1px gray;    */
+}
+
+body{
+    display: block;
+    border: none;
+}
+    header{
+        display: flex;
+        justify-content: space-between;
+/* lets add some space between the  */
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+        .scoreKeeper{
+            display: flex;
+            justify-content: center;
+            padding-left: 10%;
+            border: none;
+        }
+
+        #startTimer{
+            width:10%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-right: 10%;
+        }
+
+        .startBtn{
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .time{
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        section{
+            /* padding: 1%; */
+            text-align: center;
+        }
+            section div{
+                /* padding: 2%; */
+            }
+            .resultCont{
+                padding:5% 15% 5% 15%;
+            }
+                .resultCont ul{
+                    padding: 1%;
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-content: flex-start;
+                    align-items: flex-start;
+                }
+                .options{
+                    
+                }
+                .options hr{
+                    color: slategray;
+                }
+                .popUpMes{
+                    padding: 1%;
+                    color:slategray;
+                }
+
+    
