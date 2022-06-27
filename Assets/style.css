@@ -31,12 +31,6 @@ body{
             padding-right: 10%;
         }
 
-        .startBtn{
-            background-color: slateblue;
-            color: white;
-            border-radius: 10px;
-        }
-
         .time{
             padding-left: 10%;
             padding-right: 10%;
@@ -60,9 +54,10 @@ body{
                     align-content: flex-start;
                     align-items: flex-start;
                 }
-                .options{
-                    
+                .options li{
+                    padding: 5px;
                 }
+
                 .options hr{
                     color: slategray;
                 }
@@ -72,3 +67,10 @@ body{
                 }
 
     
+/* adding color to buttons */
+
+button{
+    background-color: slateblue;
+    color: white;
+    border-radius: 10px;
+}
