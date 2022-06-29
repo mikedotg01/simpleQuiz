@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>simpleQuiz</title>
     <link rel="stylesheet" href="./Assets/style.css">
 </head>
+
 <body>
     <header>
-            <div class="scoreKeeper">
-                <a href="">View Scores</a>
+        <div class="scoreKeeper">
+            <a href="">View Scores</a>
+        </div>
+        <div id="startTimer">
+            <div>
+                <button id="startBtn">Start</button>
             </div>
-            <div id="startTimer">
-                <div>
-                <button class="startBtn">Start</button>
-                </div>
-                <div class="time"> Time: <span>
-                </span></div>
-            </div>
+            </span>
+        </div>
+        </div>
     </header>
     <section>
-            <div class="quizCont">
-                <div class="Question">
-                    <h2>Quiz Time!</h2>
-                    <p></p>
-                </div>
-                <div class="resultCont">
-                    <div class="options">
-                    <ul>
-                    <li><button class="btn1">Answer: A </button> </li>
-                    <li><button class="btn2">Answer: B </button> </li>
-                    <li><button class="btn3">Answer: C</button> </li>
-                    <li><button class="btn4">Answer: D</button> </li>
-                    </ul>
-                    </div>
-                    <div class="popUpMes">
-                    </div>
-                </div>
+        <div id="quizCont">
+            <h2 id="headline">Quiz Time!</h2>
+            <div class="questions"> Once the quiz starts your questions will show up here. </div>
+            <div class="options">
+                <ul>
+                <button class="btnA">And, you</button>
+                <button class="btnB">Will have</button>
+                <button class="btnC">mult. choice</button>
+                <button class="btnD">options.</button>
+                </ul>
             </div>
+        </div>
+        <div class="popUpMes">
+        </div>
     </section>
 
-<script src="./Assets/script.js"></script>
+    <script src="./Assets/script.js"></script>
 </body>
+
 </html>
