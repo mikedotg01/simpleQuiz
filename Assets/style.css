@@ -51,8 +51,8 @@ body{
             .options{
                 padding:5% 15% 5% 15%;
             }
-                .options ul{
-                    padding: 3%;
+                #options ul{
+                    padding: 5%;
                     list-style-type: none;
                     display: flex;
                     flex-direction: column;
