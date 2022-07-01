@@ -65,7 +65,7 @@ body{
                 .options hr{
                     color: slategray;
                 }
-                .popUpMes{
+                #popUpMes{
                     padding: 1%;
                     color:slategray;
                     background-color: aliceblue;
@@ -73,7 +73,14 @@ body{
                     padding: 1%;
                     border: solid 1px;
                 }
-
+                #nameList{
+                    padding: 1%;
+                    color: gray;
+                    background-color: aliceblue;
+                    border-radius: 12px;
+                    padding: 1%;
+                    border: solid 1px;
+                }
     
 /* adding color to buttons */
 
@@ -86,4 +93,15 @@ button{
 
 .hideMe{
     display: none;
+}
+
+.red{
+    color: red;
+    font-weight: bolder;
+
+}
+
+.green{
+    color: darkgreen;
+    font-weight: bolder;
 }
