@@ -33,3 +33,17 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and my score
 ```
+This is your main page. From here you would click the start button to initiate a timer and the quize will begin.  
+<img width="826" alt="Screen Shot 2022-07-01 at 5 16 01 PM" src="https://user-images.githubusercontent.com/98365942/176970458-4ecbd011-fc0c-4ea5-a47a-60f6612a2bad.png">
+
+A incorrect input would then trigger a response stating its incorrect and we will be deducting 5 seconDs from the clock
+
+<img width="1792" alt="Screen Shot 2022-07-01 at 5 16 58 PM" src="https://user-images.githubusercontent.com/98365942/176970482-6084091a-2047-4b04-88ef-3d38b49940d2.png">
+
+At the end wether it is due to running out of questions or time being up, an input option will pop up allowing you to join the ranks of quiz takers. 
+
+<img width="894" alt="Screen Shot 2022-07-01 at 5 32 40 PM" src="https://user-images.githubusercontent.com/98365942/176970564-96a22809-ae5a-434c-a7c9-7f8b98728591.png">
+
+
+Thank 
+
