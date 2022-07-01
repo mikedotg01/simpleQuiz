@@ -1,4 +1,4 @@
-// alert explaining the game
+
 
 // running variable list
 var h2e = document.getElementById('headline');
@@ -6,15 +6,15 @@ var ulBtn = document.getElementById("btn");
 var options1 = document.getElementById('options');
 var popUpMes = document.getElementById('popUpMes')
 var correctCont = document.getElementById('correct');
-var incorrectCont = document.getElementById('inCorrect');
-var secondsLeft = 31;
+var incorrectCont = document.getElementById ('inCorrect');
+var inputBox = document.getElementById('inputBox');
+var secondsLeft = 30;
 var scoreCount;
 
 
 //user clicks the start button:
 startBtn.addEventListener("click", function () {
     startTimer();
-    // options1.classList.remove('hideMe');
 
 });
 
@@ -25,6 +25,12 @@ function startTimer() {
         //if the timer hits 0
         if (secondsLeft === 0) {
             index = 0;
+            h2e.textContent = 'Quiz Over';
+            questions.textContent = "🙃 Times up! " + "You scored: " + scoreCount + " out of " + qs.length;
+            //removing this class list to display the input text and submitBtn
+            inputBox.removeAttribute('class');
+            // hide the question buttons
+            options1.setAttribute('class', 'hideMe');
             // Stops execution of action at set interval
             clearInterval(timerInterval);
         }
@@ -36,7 +42,7 @@ function startTimer() {
         // variables for questions and answers. linked to index. 
         qs = ['Who invented javascript?', 'What is javascript?', 'How do you target a specific id tag in js', 'what would console.log("courseUrl") print?'];
         A = ['Larry Page', 'the brain of web design', 'document.getElementById("idName")', 'the data in the variable courseUrl'];
-        B = ['Juan Epstein', 'a programming language', 'document.getElementByid("idName")', 'the course Url'];
+        B = ['Juan Epstein', 'a programming language','document.getElementByid("idName")', 'the course Url'];
         C = ['Brandon Eich', ' a starbucks coffee option', 'document.getElementById("idName")', ' a string: courseUrl'];
         D = ['James Gosling', 'an application you can download', 'document.getElementById("className")', ' a function courseUrl'];
         correctAns = ['Brandon Eich', 'a programming language', 'document.getElementById("idName")', ' a string: courseUrl'];
@@ -66,11 +72,13 @@ function startTimer() {
                 //reset index
                 index = 0;
                 h2e.textContent = 'Quiz Over';
-                questions.textContent = "Congrats! You've completed your first coding quiz! " + "You scored: " + scoreCount + " out of " + qs.length;
-                options1.classList.add('hideMe');
+                questions.textContent = "Congrats! You've completed your first coding quiz! " + "You scored: " + scoreCount + " out of " + qs.length ;
+                inputBox.removeAttribute('class');
+                options1.setAttribute('class', 'hideMe');
                 // possibly clear timerinterval?
                 clearInterval(timerInterval);
             }
+
         }
         displaQuiz();
 
@@ -81,20 +89,19 @@ function startTimer() {
 
 
                 var correctCont = document.getElementById('correct');
-                var incorrectCont = document.getElementById('inCorrect');
-                var popUpMes = document.getElementById('popUpMes');
+                    var incorrectCont = document.getElementById ('inCorrect');
+                    var popUpMes = document.getElementById('popUpMes');
                 if (correctAns[index] === event.target.textContent) {
 
-                    // create els
-                    // if ( ){} else if();
-                    popUpMes.removeAttribute('class');
-                    correctCont.removeAttribute('class');
-                    correctCont.classList.add('green');
-
-                    setTimeout(function () {
-                        correctCont.setAttribute('class', 'hideMe');
-                        popUpMes.setAttribute('class', 'hideMe')
-                    }, 1500);
+            // create els
+            // if ( ){} else if();
+                        popUpMes.removeAttribute('class');
+                        correctCont.removeAttribute('class');
+                        correctCont.classList.add('green');
+                        setTimeout(function(){
+                            correctCont.setAttribute('class','hideMe');
+                            popUpMes.setAttribute('class','hideMe')
+                        }, 1500);
 
                     // this needs to be seen on screen. 
                     console.log('crt');
@@ -106,9 +113,9 @@ function startTimer() {
                     popUpMes.removeAttribute('class');
                     incorrectCont.removeAttribute('class');
                     incorrectCont.classList.add('red');
-                    setTimeout(function () {
-                        incorrectCont.classList.add('hideMe');
-                        popUpMes.classList.add('hideMe');
+                    setTimeout(function(){
+                        incorrectCont.setAttribute('class','hideMe');
+                        popUpMes.setAttribute('class','hideMe')
                     }, 1500);
 
                     // need to remove time from clock.
@@ -119,23 +126,24 @@ function startTimer() {
             };
             index++;
             displaQuiz();
+
         });
     };
     showQuiz();
-}
+};
 
 var submitBtn = document.getElementById('submitBtn');
-submitBtn.onclick = storeName
-var storeName = function () {
-    var nameList = document.getElementById('nameList');
+var storeName = function (){
     var initials = document.getElementById('initials').value;
-    var newScore = { name: initials, score: scoreCount };
+    var newScore = {name:initials, score:scoreCount};
     var scoreArray = JSON.parse(localStorage.getItem("highscores")) || [];
     scoreArray.push(newScore);
     localStorage.setItem('highscores', JSON.stringify(scoreArray));
+    // reloads the page once at end of function.
+    document.location.reload();
 };
 
-function displayScore() {
+function displayScore(){
     var nameList = document.getElementById('nameList');
     var scoreArray = JSON.parse(localStorage.getItem("highscores")) || [];
     scoreArray.forEach(element => {
@@ -146,3 +154,4 @@ function displayScore() {
 };
 displayScore();
 
+submitBtn.onclick = storeName;
