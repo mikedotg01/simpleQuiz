@@ -33,6 +33,7 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and my score
 ```
+
 This is your main page. From here you would click the start button to initiate a timer and the quize will begin.  
 <img width="826" alt="Screen Shot 2022-07-01 at 5 16 01 PM" src="https://user-images.githubusercontent.com/98365942/176970458-4ecbd011-fc0c-4ea5-a47a-60f6612a2bad.png">
 
@@ -45,5 +46,5 @@ At the end wether it is due to running out of questions or time being up, an inp
 <img width="894" alt="Screen Shot 2022-07-01 at 5 32 40 PM" src="https://user-images.githubusercontent.com/98365942/176970564-96a22809-ae5a-434c-a7c9-7f8b98728591.png">
 
 
-Thank 
+
 

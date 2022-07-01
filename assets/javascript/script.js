@@ -1,4 +1,4 @@
-// alert explaining the game
+
 
 // running variable list
 var h2e = document.getElementById('headline');
@@ -7,14 +7,14 @@ var options1 = document.getElementById('options');
 var popUpMes = document.getElementById('popUpMes')
 var correctCont = document.getElementById('correct');
 var incorrectCont = document.getElementById ('inCorrect');
-var secondsLeft = 31;
+var inputBox = document.getElementById('inputBox');
+var secondsLeft = 30;
 var scoreCount;
 
 
 //user clicks the start button:
 startBtn.addEventListener("click", function () {
     startTimer();
-    // options1.classList.remove('hideMe');
 
 });
 
@@ -25,6 +25,12 @@ function startTimer() {
         //if the timer hits 0
         if (secondsLeft === 0) {
             index = 0;
+            h2e.textContent = 'Quiz Over';
+            questions.textContent = "🙃 Times up! " + "You scored: " + scoreCount + " out of " + qs.length;
+            //removing this class list to display the input text and submitBtn
+            inputBox.removeAttribute('class');
+            // hide the question buttons
+            options1.setAttribute('class', 'hideMe');
             // Stops execution of action at set interval
             clearInterval(timerInterval);
         }
@@ -67,11 +73,10 @@ function startTimer() {
                 index = 0;
                 h2e.textContent = 'Quiz Over';
                 questions.textContent = "Congrats! You've completed your first coding quiz! " + "You scored: " + scoreCount + " out of " + qs.length ;
-                options1.classList.add('hideMe');
+                inputBox.removeAttribute('class');
+                options1.setAttribute('class', 'hideMe');
                 // possibly clear timerinterval?
                 clearInterval(timerInterval);
-
-
             }
 
         }
@@ -92,6 +97,7 @@ function startTimer() {
             // if ( ){} else if();
                         popUpMes.removeAttribute('class');
                         correctCont.removeAttribute('class');
+                        correctCont.classList.add('green');
                         setTimeout(function(){
                             correctCont.setAttribute('class','hideMe');
                             popUpMes.setAttribute('class','hideMe')
@@ -106,6 +112,7 @@ function startTimer() {
                     console.log('wrg');
                     popUpMes.removeAttribute('class');
                     incorrectCont.removeAttribute('class');
+                    incorrectCont.classList.add('red');
                     setTimeout(function(){
                         incorrectCont.setAttribute('class','hideMe');
                         popUpMes.setAttribute('class','hideMe')
@@ -119,19 +126,21 @@ function startTimer() {
             };
             index++;
             displaQuiz();
+
         });
     };
     showQuiz();
-}
+};
 
 var submitBtn = document.getElementById('submitBtn');
 var storeName = function (){
-    var nameList = document.getElementById('nameList');
     var initials = document.getElementById('initials').value;
     var newScore = {name:initials, score:scoreCount};
     var scoreArray = JSON.parse(localStorage.getItem("highscores")) || [];
     scoreArray.push(newScore);
     localStorage.setItem('highscores', JSON.stringify(scoreArray));
+    // reloads the page once at end of function.
+    document.location.reload();
 };
 
 function displayScore(){
@@ -145,4 +154,4 @@ function displayScore(){
 };
 displayScore();
 
-submitBtn.onclick = storeName
+submitBtn.onclick = storeName;

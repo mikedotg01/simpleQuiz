@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>simpleQuiz</title>
-    <link rel="stylesheet" href="./Assets/style.css">
+    <title>simplejsQuiz</title>
+    <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 
 <body>
     <header>
         <div class="scoreKeeper">
-            <a href="">View Scores</a>
+            <a href="#highScore">viewScores</a>
         </div>
         <div id="startTimer">
             <div>
@@ -37,22 +37,25 @@
         </div>
         <div id="popUpMes" class="hideMe">
             <hr>
-            <p class="green hideMe" id="correct">Correct!</p>
-            <p class="red hideMe" id="inCorrect">Wrong Answer = secondsLeft - 5 seconds!</p>
+            <p class=" green hideMe" id="correct">Correct!</p>
+            <p class=" red hideMe" id="inCorrect">Wrong Answer = secondsLeft - 5 seconds!</p>
         </div>
     </section>
     <section>
         <div id="nameList">
             <h3>Join our scoreBoard! </h3>
+            <div class="hideMe" id="inputBox">
             <input id="initials" type="text">
             <button id="submitBtn">submit</button>
-            <ul class="highScore">
-                
+            </div>
+            <ul id="highScore">
+
             </ul>
+            </div>
         </div>
     </section>
 
-    <script src="./Assets/script.js"></script>
+    <script src="./assets/javascript/script.js"></script>
 </body>
 
 </html>
