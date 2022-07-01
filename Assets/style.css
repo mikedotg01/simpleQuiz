@@ -31,12 +31,6 @@ body{
             padding-right: 10%;
         }
 
-        .startBtn{
-            background-color: slateblue;
-            color: white;
-            border-radius: 10px;
-        }
-
         .time{
             padding-left: 10%;
             padding-right: 10%;
@@ -49,26 +43,47 @@ body{
             section div{
                 /* padding: 2%; */
             }
-            .resultCont{
+            #quizCont{
+                background-color: aliceblue;
+                border-radius: 12px;
+                padding: 1%;
+                border: solid 1px;
+            }
+            .options{
                 padding:5% 15% 5% 15%;
             }
-                .resultCont ul{
-                    padding: 1%;
+                #options ul{
+                    padding: 5%;
                     list-style-type: none;
                     display: flex;
                     flex-direction: column;
-                    align-content: flex-start;
-                    align-items: flex-start;
                 }
-                .options{
-                    
+                .options li{
+                    padding: 5px;
                 }
+
                 .options hr{
                     color: slategray;
                 }
                 .popUpMes{
                     padding: 1%;
                     color:slategray;
+                    background-color: aliceblue;
+                    border-radius: 12px;
+                    padding: 1%;
+                    border: solid 1px;
                 }
 
     
+/* adding color to buttons */
+
+button{
+    background-color: slateblue;
+    color: white;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.hideMe{
+    display: none;
+}

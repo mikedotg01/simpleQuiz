@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>simpleQuiz</title>
     <link rel="stylesheet" href="./Assets/style.css">
 </head>
+
 <body>
     <header>
-            <div class="scoreKeeper">
-                <a href="">View Scores</a>
+        <div class="scoreKeeper">
+            <a href="">View Scores</a>
+        </div>
+        <div id="startTimer">
+            <div>
+                <button id="startBtn">Start</button>
             </div>
-            <div id="startTimer">
-                <div>
-                <button class="startBtn">Start</button>
-                </div>
-                <div class="time"> Time: <span>
-                </span></div>
-            </div>
+            </span>
+        </div>
+        </div>
     </header>
     <section>
-            <div class="quizCont">
-                <div class="Question">
-                    <h2>Quiz Time!</h2>
-                    <p></p>
-                </div>
-                <div class="resultCont">
-                    <div class="options">
-                    <ul>
-                    <li><button class="btn1"></button> </li>
-                    <li><button class="btn2"></button> </li>
-                    <li><button class="btn3"></button> </li>
-                    <li><button class="btn4"></button> </li>
-                    </ul>
-                    </div>
-
-                    <div class="popUpMes">
-                    </div>
-                </div>
+        <div id="quizCont">
+            <h2 id="headline">Quiz Time!</h2>
+            <div id="questions"> Once the quiz starts your questions will show up here. </div>
+            <div id="options">
+                <ul id="myList">
+                <button class="btn" id="btnA">And, you</button><br>
+                <button class="btn" id="btnB">Will have</button><br>
+                <button class="btn" id="btnC">mult. choice</button><br>
+                <button class="btn" id="btnD">options.</button><br>
+                </ul>
             </div>
+        </div>
+        <div id="popUpMes" class="hideMe">
+            <hr>
+            <p class="green hideMe" id="correct">Correct!</p>
+            <p class="red hideMe" id="inCorrect">Wrong Answer = secondsLeft - 5 seconds!</p>
+        </div>
+    </section>
+    <section>
+        <div id="nameList">
+            <h3>Join our scoreBoard! </h3>
+            <input id="initials" type="text">
+            <button id="submitBtn">submit</button>
+            <ul class="highScore">
+                
+            </ul>
+        </div>
     </section>
 
-<script src="./Assets/script.js"></script>
+    <script src="./Assets/script.js"></script>
 </body>
+
 </html>
