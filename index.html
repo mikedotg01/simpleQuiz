@@ -27,19 +27,32 @@
             <h2 id="headline">Quiz Time!</h2>
             <div id="questions"> Once the quiz starts your questions will show up here. </div>
             <div id="options">
-                <ul>
-                <button class="btn" id="btnA">And, you</button>
-                <button class="btn" id="btnB">Will have</button>
-                <button class="btn" id="btnC">mult. choice</button>
-                <button class="btn" id="btnD">options.</button>
+                <ul id="myList">
+                <button class="btn" id="btnA">And, you</button><br>
+                <button class="btn" id="btnB">Will have</button><br>
+                <button class="btn" id="btnC">mult. choice</button><br>
+                <button class="btn" id="btnD">options.</button><br>
                 </ul>
             </div>
         </div>
-        <div class="popUpMes">
+        <div id="popUpMes" class="hideMe">
+            <hr>
+            <p class="green hideMe" id="correct">Correct!</p>
+            <p class="red hideMe" id="inCorrect">Wrong Answer = secondsLeft - 5 seconds!</p>
+        </div>
+    </section>
+    <section>
+        <div id="nameList">
+            <h3>Join our scoreBoard! </h3>
+            <input id="initials" type="text">
+            <button id="submitBtn">submit</button>
+            <ul class="highScore">
+                
+            </ul>
         </div>
     </section>
 
-    <script src="./Assets/test.js"></script>
+    <script src="./Assets/script.js"></script>
 </body>
 
 </html>

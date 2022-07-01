@@ -46,7 +46,8 @@ body{
             #quizCont{
                 background-color: aliceblue;
                 border-radius: 12px;
-                padding: 2px;
+                padding: 1%;
+                border: solid 1px;
             }
             .options{
                 padding:5% 15% 5% 15%;
@@ -56,9 +57,6 @@ body{
                     list-style-type: none;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
-                    align-content: flex-start;
-                    align-items: flex-start;
                 }
                 .options li{
                     padding: 5px;
@@ -70,6 +68,10 @@ body{
                 .popUpMes{
                     padding: 1%;
                     color:slategray;
+                    background-color: aliceblue;
+                    border-radius: 12px;
+                    padding: 1%;
+                    border: solid 1px;
                 }
 
     
@@ -79,6 +81,7 @@ button{
     background-color: slateblue;
     color: white;
     border-radius: 10px;
+    margin: auto;
 }
 
 .hideMe{
