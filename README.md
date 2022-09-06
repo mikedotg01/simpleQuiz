@@ -4,7 +4,7 @@ This is a simple quiz, with buttons.
 
 The goal is to build a timed coding quiz with multiple-choice questions, as buttons. The app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript - and it will feature a clean, elegant and efficient user interface. 
 
-The quiz must be timed and count down. 
+The quiz mustis timed and uses a count down. 
 - feature 4 questions.
     + with 4 multiple choice buttons. 
     + if you answer correctly you will be greeted by the next question.
