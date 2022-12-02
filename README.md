@@ -1,8 +1,5 @@
 # simpleQuiz
-This is a simple quiz, with buttons. 
-
-
-The goal is to build a timed coding quiz with multiple-choice questions, as buttons. The app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript - and it will feature a clean, elegant and efficient user interface. 
+This is a simple timed coding quiz with multiple-choice questions, as buttons. The app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript - and it will feature a clean, elegant and efficient user interface. 
 
 The quiz mustis timed and uses a count down. 
 - feature 4 questions.
